@@ -14,6 +14,18 @@
     
     <h1>Welcome, Mariany Uhuy🥺</h1>
 
+    <h6>USD to IDR Exchange Rate for 
+        <span id="dateToday" style="text-decoration: underline;"></span>
+        <div>
+          <span>1 USD = IDR</span>
+          <span id="currencyExchange"></span>
+        </div>
+        
+        
+    </h6>
+
+    <hr>
+
     <h2 style="color:#ee33a0"> Bank Indonesia Interest Rate Analysis 🙈 </h2>
     <h3> WNI react to interest rate hike!</h3>
     <div>
@@ -61,6 +73,17 @@
         config
         );
     </script>
+    <script>
+      const currentdate = new Date().toDateString();
+      elm = document.getElementById("dateToday");
+      elm.innerHTML = currentdate;
+
+      exchangeElm = document.getElementById("currencyExchange")
+      fetch("https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/usd.json")
+        .then(resp => resp.json())
+        .then(data => exchangeElm.innerHTML=data.usd.idr)
+    </script>
+
 
 
          
