@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News portal</title>
+    <!-- Source (brings in chart.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="styless.css">
+</head>
+
+<body>
+    
+    <h1>Welcome, Mariany🥺</h1>
+
+    <h2 style="color:#ee33a0"> Bank Indonesia Interest Rate Analysis 🙈 </h2>
+    <h3> WNI react to interest rate hike!</h3>
+    <div>
+        <canvas id="myChart"></canvas>
+    </div>
+          
+    <h6>Sumber : Detik.com</h6>
+<!--     tes notes -->
+    <ul>
+        <li>Indonesia intereset rate hike for second year in a row</li>
+        <li>CPI and consumer</li>
+        <li>Another 2.% hike "possible". said representative</li>
+        <li>Indonesia Economic</li>
+    </ul> 
+
+    <img src="https://www.bi.go.id/Banner/Banner-BIFAST_.png"
+    alt="Peluncuran Uang"/>
+    <script>
+        const labels = [
+          'January',
+          'February',
+          'March',
+          'April',
+          'May',
+          'June',
+        ];
+      
+        const data = {
+          labels: labels,
+          datasets: [{
+            label: 'Interest Rate Indonesia',
+            backgroundColor: 'rgb(228, 41, 144)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: [0, 10, 5, 2, 20, 30, 45],
+          }]
+        };
+      
+        const config = {
+          type: 'bar',
+          data: data,
+          options: {}
+        };
+        const myChart = new Chart(
+        document.getElementById('myChart'),
+        config
+        );
+    </script>
+
+
+         
+</body>
+
+<h1>Social Analytics </h1>
+</html>
